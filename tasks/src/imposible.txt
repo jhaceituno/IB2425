@@ -1,0 +1,5 @@
+12
+practicas 4
+juegos 5
+cine 4
+estudio 2

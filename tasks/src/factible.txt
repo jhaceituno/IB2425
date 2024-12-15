@@ -1,0 +1,5 @@
+16
+clase 4
+estudio 6
+juegos 2
+deporte 1
