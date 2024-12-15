@@ -17,7 +17,7 @@
 
 int main(int argc, char* argv[]) {
   if (argc != 2) {
-    std::cerr << argv[0] << " <numero de piezas>\n";
+    std::cerr << argv[0] << " <number of pieces>\n";
     return 1;
   }
   srand(time(0));  // Inicialización de la semilla aleatoria
@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
   size_t numero_de_piezas{static_cast<size_t>(atoi(argv[1]))};
   ChessVector piezas{numero_de_piezas};
   while (CheckOverlap(piezas)) {
-    std::cout << piezas << "Several piezas are in the same position. "
+    std::cout << piezas << "Several pieces are in the same position. "
               << "We are going to relocate them:\n";
     for (auto& pieza: piezas) {
       pieza.RandomPosition();
