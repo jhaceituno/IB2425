@@ -8,7 +8,7 @@
  * @date 09 Aug 2025
  * @brief Overloading product operators
  *        Operators can take already existing types, as long as the
- *        combinatior of parameter types does not already exist
+ *        combination of parameter types does not already exist
  */
 
 #include <iostream>
@@ -64,4 +64,5 @@ int main() {
             << kVector1 * kFactor << std::endl;
   return 0;                            
 }
+
 
