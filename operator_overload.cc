@@ -1,8 +1,8 @@
 /**
  * Universidad de La Laguna
- * Escuela Superior de IngenierÌa y TecnologÌa
- * Grado en IngenierÌa Inform·tica
- * Inform·tica B·sica
+ * Escuela Superior de Ingenier√≠a y Tecnolog√≠a
+ * Grado en Ingenier√≠a Inform√°tica
+ * Inform√°tica B√°sica
  *
  * @author Javier Hdez Aceituno
  * @date 09 Aug 2025
