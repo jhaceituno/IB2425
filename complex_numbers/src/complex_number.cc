@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author Javier Hdez. Aceituno
- * @date 24.nov.2024
+ * @date 25.nov.2025
  * @brief Clase de gestión de números complejos
  */
 
@@ -13,11 +13,11 @@
 #include "complex_number.h"
 
 /** Constructor de la clase
- *  @param[in] real Parte real
- *  @param[in] imaginary Parte imaginaria
+ *  @param real Parte real
+ *  @param imaginary Parte imaginaria
  */
 ComplexNumber::ComplexNumber(double real, double imaginary) :
-                             real_{real}, imaginary_{imaginary} {}
+  real_{real}, imaginary_{imaginary} {}
 
 /** Operador de cambio de signo
  *  @return Número complejo cambiado de signo
@@ -42,26 +42,29 @@ ComplexNumber ComplexNumber::Reverse() const {
 }
 
 /** Operador de suma de números complejos
- *  @param[in] c1 Sumando izquierdo
- *  @param[in] c2 Sumando derecho
+ *  @param left Sumando izquierdo
+ *  @param right Sumando derecho
  *  @return Resultado de la suma
  */
-ComplexNumber operator+(const ComplexNumber& c1, const ComplexNumber& c2) {
-  return ComplexNumber{c1.real() + c2.real(), c1.imaginary() + c2.imaginary()};
+ComplexNumber operator+(const ComplexNumber& left,
+                        const ComplexNumber& right) {
+  return ComplexNumber{left.real() + right.real(),
+                       left.imaginary() + right.imaginary()};
 }
 
 /** Operador de resta de números complejos
- *  @param[in] c1 Minuendo
- *  @param[in] c2 Sustraendo
+ *  @param left Minuendo
+ *  @param right Sustraendo
  *  @return Resultado de la resta
  */
-ComplexNumber operator-(const ComplexNumber& c1, const ComplexNumber& c2) {
-  return c1 + (-c2);
+ComplexNumber operator-(const ComplexNumber& left,
+                        const ComplexNumber& right) {
+  return left + (-right);
 }
 
 /** Operador de multiplicación de un número complejo por un escalar
- *  @param[in] complex Factor complejo
- *  @param[in] scalar Factor escalar
+ *  @param complex Factor complejo
+ *  @param scalar Factor escalar
  *  @return Resultado de la multiplicación
  */
 ComplexNumber operator*(const ComplexNumber& complex, const double scalar) {
@@ -69,18 +72,21 @@ ComplexNumber operator*(const ComplexNumber& complex, const double scalar) {
 }
 
 /** Operador de multiplicación de números complejos
- *  @param[in] c1 Factor izquierdo
- *  @param[in] c2 Factor derecho
+ *  @param left Factor izquierdo
+ *  @param right Factor derecho
  *  @return Resultado de la multiplicación
  */
-ComplexNumber operator*(const ComplexNumber& c1, const ComplexNumber& c2) {
-  return ComplexNumber{c1.real() * c2.real() - c1.imaginary() * c2.imaginary(),
-                       c1.real() * c2.imaginary() + c2.real() * c1.imaginary()};
+ComplexNumber operator*(const ComplexNumber& left,
+                        const ComplexNumber& right) {
+  return ComplexNumber{
+    left.real() * right.real() - left.imaginary() * right.imaginary(),
+    left.real() * right.imaginary() + right.real() * left.imaginary()
+  };
 }
 
 /** Operador de división de un número complejo entre un escalar
- *  @param[in] complex Dividendo complejo
- *  @param[in] scalar Divisor escalar
+ *  @param complex Dividendo complejo
+ *  @param scalar Divisor escalar
  *  @return Cociente de la división
  */
 ComplexNumber operator/(const ComplexNumber& complex, const double scalar) {
@@ -88,21 +94,22 @@ ComplexNumber operator/(const ComplexNumber& complex, const double scalar) {
 }
 
 /** Operador de división de números complejos
- *  @param[in] c1 Dividendo
- *  @param[in] c2 Divisor
+ *  @param left Dividendo
+ *  @param right Divisor
  *  @return Cociente de la división
  */
-ComplexNumber operator/(const ComplexNumber& c1, const ComplexNumber& c2) {
-  return c1 * c2.Reverse();
+ComplexNumber operator/(const ComplexNumber& left,
+                        const ComplexNumber& right) {
+  return left * right.Reverse();
 }
 
 /** Operador de inserción en el flujo de salida para números complejos
- *  @param[out] out Flujo de salida
- *  @param[in] c Número complejo
+ *  @param out Flujo de salida
+ *  @param complex Número complejo
  *  @return Referencia al flujo de salida
  */
-std::ostream& operator<<(std::ostream& out, const ComplexNumber& c) {
-  out << '(' << c.real() << ", " << c.imaginary() << ')';
+std::ostream& operator<<(std::ostream& out, const ComplexNumber& complex) {
+  out << '(' << complex.real() << ", " << complex.imaginary() << ')';
   return out; 
 }
 

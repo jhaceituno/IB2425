@@ -11,7 +11,6 @@
 
 #include <iostream>
 #include <iomanip>
-#include <string>
 #include "book.h"
 
 int main(int argc, char* argv[]) {
@@ -19,10 +18,10 @@ int main(int argc, char* argv[]) {
     std::cout << argv[0] << " <tax>\n";
     return 1;
   }
-  double tax{std::stod(argv[1])};
-  Book quijote{"El quijote de la Mancha", 1605, 21};
-  Book lazarillo{"El lazarillo de Tormes", 1554, 18};
-  Book pilares{"Los pilares de la Tierra", 1989, 27};
+  double tax{atof(argv[1])};
+  const Book quijote{"El quijote de la Mancha", 1605, 21};
+  const Book lazarillo{"El lazarillo de Tormes", 1554, 18};
+  const Book pilares{"Los pilares de la Tierra", 1989, 27};
   std::cout << std::fixed << std::setprecision(2)
             << quijote << ", " << quijote.GetPriceWithTax(tax) << std::endl
             << lazarillo << ", " << lazarillo.GetPriceWithTax(tax) << std::endl

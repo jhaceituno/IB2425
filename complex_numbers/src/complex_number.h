@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author Javier Hdez. Aceituno
- * @date 24.nov.2024
+ * @date 25.nov.2025
  * @brief Cabecera de la clase ComplexNumber
  */
 
@@ -26,13 +26,12 @@ class ComplexNumber {
   double imaginary_;
 };
 
-ComplexNumber operator+(const ComplexNumber& c1, const ComplexNumber& c2);
-ComplexNumber operator-(const ComplexNumber& c1, const ComplexNumber& c2);
-ComplexNumber operator*(const ComplexNumber& complex, const double scalar);
-ComplexNumber operator*(const ComplexNumber& c1, const ComplexNumber& c2);
-ComplexNumber operator/(const ComplexNumber& complex, const double scalar);
-ComplexNumber operator/(const ComplexNumber& c1, const ComplexNumber& c2);
-std::ostream& operator<<(std::ostream& out, const ComplexNumber& c);
+ComplexNumber operator+(const ComplexNumber&, const ComplexNumber&);
+ComplexNumber operator-(const ComplexNumber&, const ComplexNumber&);
+ComplexNumber operator*(const ComplexNumber&, const double scalar);
+ComplexNumber operator*(const ComplexNumber&, const ComplexNumber&);
+ComplexNumber operator/(const ComplexNumber&, const double scalar);
+ComplexNumber operator/(const ComplexNumber&, const ComplexNumber&);
+std::ostream& operator<<(std::ostream& out, const ComplexNumber&);
 
 #endif
-

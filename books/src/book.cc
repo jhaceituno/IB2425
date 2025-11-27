@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author Javier Hdez. Aceituno
- * @date 24.nov.2024
+ * @date 25.nov.2025
  * @brief Clase de gestión de libros
  */
 
@@ -14,15 +14,15 @@
 #include "book.h"
 
 /** Constructor de la clase
- *  @param[in] title Título del libro
- *  @param[in] year Año de publicación
- *  @param[in] price Precio de venta
+ *  @param title Título del libro
+ *  @param year Año de publicación
+ *  @param price Precio de venta
  */
 Book::Book(const std::string& title, int year, double price) :
            title_{title}, year_{year}, price_{price} {}
 
 /** Cálculo del precio de venta con impuesto
- *  @param[in] tax Impuesto de venta
+ *  @param tax Impuesto de venta
  *  @return Previo con impuesto
  */
 double Book::GetPriceWithTax(double tax) const {
@@ -30,8 +30,8 @@ double Book::GetPriceWithTax(double tax) const {
 }
 
 /** Operador de inserción en el flujo de salida parala clase Book
- *  @param[out] out Flujo de salida
- *  @param[in] book Libro
+ *  @param out Flujo de salida
+ *  @param book Libro
  *  @return Referencia al flujo de salida
  */
 std::ostream& operator<<(std::ostream& out, const Book& book) {
