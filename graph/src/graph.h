@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author Javier Hdez. Aceituno
- * @date 10.dic.2024
+ * @date 10.dic.2025
  * @brief Cabecera de la clase Graph
  */
 

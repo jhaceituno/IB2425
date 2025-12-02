@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author Javier Hdez. Aceituno
- * @date 02.dic.2024
+ * @date 02.dic.2025
  * @brief Programa principal para la clase Reina
  */
 
