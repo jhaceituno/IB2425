@@ -5,7 +5,7 @@
  * Informática Básica
  *
  * @author Javier Hdez. Aceituno
- * @date 17.dic.2024
+ * @date 22.nov.2025
  * @brief Programa principal de la clase ChessPiece
  */
 
