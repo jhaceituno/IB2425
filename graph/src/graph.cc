@@ -11,6 +11,7 @@
 
 #include "graph.h"
 #include <stdexcept>
+#include <algorithm>
 
 /** Operador de suma de grafos
  * @param left Grafo base
@@ -35,9 +36,9 @@ Graph operator+(const Graph& left, const Graph& right) {
                                  edge.second + left.vertices_};
     output.edges_.emplace_back(new_edge);
   }
+  std::sort(output.edges_.begin(), output.edges_.end());
   return output;
 }
-
 
 /** Operador de inserción en el flujo de salida
  * @param out Flujo de salida
@@ -46,7 +47,7 @@ Graph operator+(const Graph& left, const Graph& right) {
  */
 std::ostream& operator<<(std::ostream& out, const Graph& graph) {
   out << graph.vertices_ << ' ' << graph.edges_.size() << std::endl;
-  for (auto edge: graph.edges_) {
+  for (const auto& edge: graph.edges_) {
     out << edge.first << ' ' << edge.second << std::endl;
   }
   return out;
