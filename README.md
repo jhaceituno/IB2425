@@ -10,6 +10,7 @@ Grado en Ingeniería Informática, Universidad de La Laguna
 5. `chess`
 6. `tasks`
 7. `chess_move`
+8. `queens`
 
 # Soluciones de exámenes
 
