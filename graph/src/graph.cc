@@ -12,6 +12,33 @@
 #include "graph.h"
 #include <stdexcept>
 
+/** Operador de suma de grafos
+ * @param left Grafo base
+ * @param right Grafo a añadir
+ * @return Grafo suma, conectando los nodos 0 de ambos
+ * ╭─> 1 ─> 3     ╭─> 1 ─> 3     ╭─> 1 ─> 3     ╭─> 7 ─> 9
+ * 0              0              0 ───────────> 6
+ * │   ╭──> 4  +  │   ╭──> 4  =  │   ╭──> 4  +  │   ╭──> 10
+ * ╰─> 2          ╰─> 2          ╰─> 2          ╰─> 8
+ *     ╰──> 5         ╰──> 5         ╰──> 5         ╰──> 11
+ */
+Graph operator+(const Graph& left, const Graph& right) {
+  Graph output;
+  output.vertices_= left.vertices_ + right.vertices_;
+  output.edges_.reserve(left.edges_.size() + right.edges_.size() + 1);
+  output.edges_.emplace_back(std::pair<int, int>{0, left.vertices_});
+  for (const auto& edge: left.edges_) {
+    output.edges_.emplace_back(edge);
+  }
+  for (const auto& edge: right.edges_) {
+    std::pair<int, int> new_edge{edge.first + left.vertices_,
+                                 edge.second + left.vertices_};
+    output.edges_.emplace_back(new_edge);
+  }
+  return output;
+}
+
+
 /** Operador de inserción en el flujo de salida
  * @param out Flujo de salida
  * @param graph Grafo a mostrar
