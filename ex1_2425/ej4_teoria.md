@@ -19,7 +19,7 @@
 1. El tipo de retorno del destructor de una clase siempre debe ser `void`.
    > **Falso,** los destructores no tienen ningún tipo de retorno.
 1. La sobrecarga del operador de inserción en el flujo de salida se implementa como un método de clase.
-   > **Falso,** el operador de inserción en el flujo de salida jamás puede implementarse como un método de clase, ya que su operando izquierdo es de tipo `std::ofstream` y, por tanto, sólo podría ser un método de la clase `std::ofstream`, a la que no tenemos acceso.
+   > **Falso,** el operador de inserción en el flujo de salida jamás puede implementarse como un método de clase, ya que su operando izquierdo es de tipo `std::ostream` y, por tanto, sólo podría ser un método de la clase `std::ostream`, a la que no tenemos acceso.
 1. Una clase hija sólo podrá acceder a los miembros privados de su clase madre si hereda en modo público.
    > **Falso,** los miembros privados de una clase son siempre inaccesibles a sus clases derivadas, independientemente de en qué modo hereden.
 1. La capa de interfaz de red del modelo TCP/IP corresponde a la conexión física.
