@@ -6,7 +6,7 @@
  *
  * @author Javier Hdez. Aceituno
  * @date 02.dic.2025
- * @brief Cabecera de la clase COrona
+ * @brief Cabecera de la clase Corona
  */
 
 #ifndef CORONA_H

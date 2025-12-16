@@ -11,6 +11,7 @@ Grado en Ingeniería Informática, Universidad de La Laguna
 6. `tasks`
 7. `chess_move`
 8. `queens`
+9. `integral`
 
 # Soluciones de exámenes
 
