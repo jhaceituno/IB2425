@@ -11,7 +11,7 @@
 
 /* Rúbrica de evaluación .... 3 ptos
 -------------------------------------
-Paso de parámatros ........ 0.5 ptos
+Paso de parámetros ........ 0.5 ptos
 Implem. y llamada a Swap .. 0.5 ptos
 Bucle y cálculo de MCD .... 0.5 ptos
 Uso de línea de comandos .. 0.5 ptos
